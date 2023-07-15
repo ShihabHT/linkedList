@@ -14,7 +14,12 @@ void printList (Node* n) {
     }
 }
 
-void insertAtTheFront(Node**head, int newValue){
+void insertAtTheFront(Node**head, int newValue){ //we took pointer of pointer cause
+/*
+  cause the newNode should be the head noow. if we take just pointer the head will not
+  change as the scope of the head is  within the  function. In order to change the
+  head of the main function we need to use the pointer of the pointer.
+*/
     //1. Prepare a newNode
     Node* newNode = new Node();
     newNode->Value = newValue;
